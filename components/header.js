@@ -133,7 +133,7 @@ function Header() {
               fontWeight: 600,
             }}
           >
-            Let's Talk
+            Lets Talk
           </Typography>
         </Box>
       </header>
