@@ -7,32 +7,32 @@ import {
   useTheme,
 } from "@mui/material";
 import Image from "next/image";
-import ApartmentIcon from '@mui/icons-material/Apartment';
-import AccountTreeIcon from '@mui/icons-material/AccountTree';
-import Diversity2Icon from '@mui/icons-material/Diversity2';
-import CodeIcon from '@mui/icons-material/Code';
+import ApartmentIcon from "@mui/icons-material/Apartment";
+import AccountTreeIcon from "@mui/icons-material/AccountTree";
+import Diversity2Icon from "@mui/icons-material/Diversity2";
+import CodeIcon from "@mui/icons-material/Code";
 //======================================
 
 const testimonials = [
   {
-    icon: <ApartmentIcon sx={{color:'#D3D3D4', fontSize:32}} />,
-    stat:4,
-    desc:"Year of operation"
+    icon: <ApartmentIcon sx={{ color: "#D3D3D4", fontSize: 32 }} />,
+    stat: 4,
+    desc: "Year of operation",
   },
   {
-    icon: <AccountTreeIcon sx={{color:'#D3D3D4', fontSize:32}} />,
-    stat:55,
-    desc:"Project delivered"
+    icon: <AccountTreeIcon sx={{ color: "#D3D3D4", fontSize: 32 }} />,
+    stat: 55,
+    desc: "Project delivered",
   },
   {
-    icon: <Diversity2Icon sx={{color:'#D3D3D4', fontSize:32}} />,
-    stat:1000,
-    desc:"Community"
+    icon: <Diversity2Icon sx={{ color: "#D3D3D4", fontSize: 32 }} />,
+    stat: 1000,
+    desc: "Community",
   },
   {
-    icon: <CodeIcon sx={{color:'#D3D3D4', fontSize:32}} />,
-    stat:40000,
-    desc:"Lines of codes"
+    icon: <CodeIcon sx={{ color: "#D3D3D4", fontSize: 32 }} />,
+    stat: 40000,
+    desc: "Lines of codes",
   },
 ];
 
@@ -90,7 +90,7 @@ export default function ProjectStats() {
         </Grid>
 
         {testimonials.map((x) => (
-          <Grid item xl={3} lg={3} md={3} sm={12} xs={12}>
+          <Grid key={x} item xl={3} lg={3} md={3} sm={12} xs={12}>
             <Box
               sx={{
                 // backgroundColor: "#27272e",
@@ -107,23 +107,34 @@ export default function ProjectStats() {
                   ml: -3,
                   mb: 2,
                 },
-                '&:hover': {
-                    background: "#2f2f34",
-                 },
+                "&:hover": {
+                  background: "#2f2f34",
+                },
               }}
             >
               {/* <Image src="/digital.png" width={90} height={90} /> */}
               {x.icon}
               <Typography
                 variant="h2"
-                sx={{ color: "#5956e9", fontFamily: "poppins", mt: 3, mb: 3 ,fontWeight:"bolder"}}
+                sx={{
+                  color: "#5956e9",
+                  fontFamily: "poppins",
+                  mt: 3,
+                  mb: 3,
+                  fontWeight: "bolder",
+                }}
               >
-                {x.stat}{"+"}
+                {x.stat}
+                {"+"}
               </Typography>
 
               <Typography
                 variant="h6"
-                sx={{ color: "#D3D3D4", fontFamily: "poppins",fontWeight:"bolder"}}
+                sx={{
+                  color: "#D3D3D4",
+                  fontFamily: "poppins",
+                  fontWeight: "bolder",
+                }}
               >
                 {x.desc}
               </Typography>

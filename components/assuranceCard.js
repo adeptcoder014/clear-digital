@@ -221,6 +221,7 @@ export default function Assurance() {
             {socials.map((x) => {
               return (
                 <Box
+                key={x}
                   sx={{
                     display: "flex",
                     justifyContent: "space-around",

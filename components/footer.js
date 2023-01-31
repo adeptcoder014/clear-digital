@@ -90,6 +90,7 @@ export default function Footer() {
                 </Typography>
                 {footerDevelopment.map((x) => (
                   <Typography
+                  key={x}
                     sx={{
                       color: "#D3D3D4",
                       fontWeight: "bold",
@@ -114,6 +115,8 @@ export default function Footer() {
                 </Typography>
                 {footerMarketing.map((x) => (
                   <Typography
+                  key={x}
+
                     sx={{
                       color: "#D3D3D4",
                       fontWeight: "bold",
@@ -138,6 +141,8 @@ export default function Footer() {
                 </Typography>
                 {footerCompany.map((x) => (
                   <Typography
+                  key={x}
+
                     sx={{
                       color: "#D3D3D4",
                       fontWeight: "bold",

@@ -74,7 +74,7 @@ export default function Services() {
         </Grid>
 
         {content.map((x) => (
-          <Grid item xl={3} lg={3} md={3} sm={12} xs={12}>
+          <Grid key={x} item xl={3} lg={3} md={3} sm={12} xs={12}>
             <Box
               sx={{
                 backgroundColor: "#27272e",

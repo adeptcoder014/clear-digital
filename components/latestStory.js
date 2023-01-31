@@ -76,7 +76,7 @@ export default function LatestStory() {
               textAlign: "center",
             }}
           >
-            What's Going On
+            Whats Going On
           </Typography>
           <Typography
             variant="h2"

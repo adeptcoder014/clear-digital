@@ -53,7 +53,7 @@ function Header() {
   //====================
   return (
     <>
-      <header style={{marginBottom:65}}>
+      <header style={{ marginBottom: 65 }}>
         <Box sx={{ display: "flex" }}>
           <Image src={"/cd.svg"} height={50} width={50} />
           <Box>
@@ -150,7 +150,9 @@ function Header() {
           className={`menu ${showDev ? "show-menu" : ""}`}
         >
           {devItem.map((x) => (
-            <li className="list-item">{x}</li>
+            <li key={x} className="list-item">
+              {x}
+            </li>
           ))}
         </div>
       </Box>
@@ -167,7 +169,9 @@ function Header() {
           className={`markMenu ${showMark ? "show-markMenu" : ""}`}
         >
           {markItem.map((x) => (
-            <li className="list-item">{x}</li>
+            <li key={x} className="list-item">
+              {x}
+            </li>
           ))}
         </div>
       </Box>
@@ -188,7 +192,9 @@ function Header() {
           className={`menuRes ${showRes ? "show-resMenu" : ""}`}
         >
           {resItem.map((x) => (
-            <li className="list-item">{x}</li>
+            <li key={x} className="list-item">
+              {x}
+            </li>
           ))}{" "}
         </div>
       </Box>
